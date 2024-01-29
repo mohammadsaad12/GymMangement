@@ -1,0 +1,41 @@
+<div class="heading text-light pt-2">
+  <h4>Trainer List Component</h4>
+  <div class="line"></div>
+</div>
+
+<div class="container mt-3">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th class="text-center">SrNo.</th>
+        <th>Trainer Name</th>
+        <th>Trainer Email</th>
+        <th>Trainer Mobile</th>
+        <th>Joining Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of TrainerData">
+        <td class="text-center">{{row.id}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.email}}</td>
+        <td>{{row.mobile}}</td>
+        <td>{{row.JoiningDate}}</td>
+        <td>
+          <button (click)="viewTrainer(row)" title="View" class="btn btn-sm btn-secondary">
+            <i class="fas fa-eye"></i> 
+          </button>
+
+          <button (click)="editTrainer(row)" title="Edit" class="btn btn-sm btn-success ml-1">
+            <i class="fas fa-edit"></i> 
+          </button>
+          <button title="Delete" (click)="deleteTrainer(row)" class="btn btn-sm btn-danger ml-1">
+            <i class="fas fa-trash-alt"></i>  
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,21 @@
+.mdetails , .card {
+    color: rgb(255, 255, 255);
+    background-color: rgba(27, 27, 27, 0.116); /* Adjust the alpha (fourth value) for transparency */
+    backdrop-filter: blur(4px);
+}
+
+ul , li{
+    background: transparent;
+    color: white;
+}
+
+.card-header{
+    color: rgb(255, 255, 255);
+    background-color: rgba(158, 158, 158, 0.116); /* Adjust the alpha (fourth value) for transparency */
+    backdrop-filter: blur(4px);
+}
+
+.card{
+    border: 2px solid white ;
+    border-radius: 20px;
+}

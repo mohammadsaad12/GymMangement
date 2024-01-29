@@ -1,0 +1,83 @@
+<div class="heading text-light text-light py-2">
+    <h4>Trainer Form Component</h4>
+    <div class="line"></div>
+
+ </div>
+
+ <div  class="container details-form  p-4 mt-2">         
+       
+    <!-- *ngIf="showForm" -->
+    <form [formGroup]="trainerForm" >
+       
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="field1">Trainer Name :</label>
+            <input type="text"  formControlName="name" class="form-control" id="field1" placeholder="Enter name">
+            
+          </div>
+          
+          <div class="form-group col-md-4">
+            <label for="field2">Email Address :</label>
+            <input type="text" formControlName="email" class="form-control" id="field2" placeholder="Enter email">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="field3">Phone Number :</label>
+            <input type="text" formControlName="mobile" class="form-control" id="field3" placeholder="Enter contact">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="expertise">Area of Expertise :</label>
+            <select class="form-control" formControlName="expertise" id=" ">
+                <option value="" disabled selected >Select Expertise Category</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Strength">Strength</option>
+                <option value="Bodybuilding">Bodybuilding</option>
+                <option value="Weight Lifting">Weight lifting</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Yoga">other</option>
+              </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="Experience">Years Of Experience :</label>
+            <select class="form-control" formControlName="experience" id=" ">
+                <option value="" disabled selected >Select Experience</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                 
+              </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="field3">Date Of birth :</label>
+            <input type="date"  formControlName="dob" class="form-control" id="field3" placeholder="date of birth">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="field3">Profile Photo : </label>
+            <input type="text" formControlName="image" class="form-control" id="field3" placeholder="add Profile photo link">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="field3">Joining Date :</label>
+            <input type="date"  formControlName="JoiningDate" class="form-control" id="field3" placeholder="your joining date">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="field3">Client Testimonials : </label>
+            <input type="text" formControlName="testimonial" class="form-control" id="field3" placeholder=" add client testimonial">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="field3">Certifications : </label>
+            <input type="text" formControlName="certification" class="form-control" id="field3" placeholder="add certifications">
+          </div>
+         
+        </div>
+        
+        <div class="text-center">
+          <button class="btn btns btn-primary" [disabled]="trainerForm.invalid" (click)="saveTrainer()">
+            {{ isEdit ? 'Update Trainer' : 'Add Trainer' }}
+          </button>            <!-- <button    class="btn btns btn-primary">Update Product</button> -->
+          </div>
+      </form>
+</div>

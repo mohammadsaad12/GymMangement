@@ -1,0 +1,15 @@
+table  , td{
+    color: rgb(255, 255, 255);
+    background-color: rgba(27, 27, 27, 0.103); /* Adjust the alpha (fourth value) for transparency */
+    backdrop-filter: blur(4px); /* Adjust the blur radius as needed */
+}
+
+table{
+    padding: 10px 2px;
+}
+
+th{
+    color: white;
+    background-color: rgba(219, 219, 219, 0.192); /* Adjust the alpha (fourth value) for transparency */
+    backdrop-filter: blur(1px); /* Adjust the blur radius as needed */
+}

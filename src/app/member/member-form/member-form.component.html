@@ -1,0 +1,146 @@
+<div class="heading text-light pt-1">
+    <h4>Member Form Component</h4>
+    <div class="line"></div>
+ </div>
+
+ 
+
+ <div  class="container details-form  mb-3 mt-2">         
+       
+    <!-- *ngIf="showForm" -->
+    <form [formGroup]="memberForm" >
+       
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="field1">Member First Name :</label>
+            <input type="text"  formControlName="fname" class="form-control" id="field1" placeholder="Enter name">
+            
+          </div>
+          <div class="form-group col-md-6">
+            <label for="field1">Member Last Name :</label>
+            <input type="text"  formControlName="lname" class="form-control" id="field1" placeholder="Enter name">
+            
+          </div>
+          <div class="form-group col-md-3">
+            <label for="field2">Email Address :</label>
+            <input type="text" formControlName="email" class="form-control" id="field2" placeholder="Enter email">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="field3">Phone Number :</label>
+            <input type="text" formControlName="mobile" class="form-control" id="field3" placeholder="Enter contact">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="field3">Date Of birth :</label>
+            <input type="date"  formControlName="dob" class="form-control" id="field3" placeholder="date of birth">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="field3">Weight in Kg :</label>
+            <input type="text"  formControlName="weight" class="form-control" id="field3" placeholder="date of birth">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="expertise">Membership Type :</label>
+            <select class="form-control" formControlName="mtype" id=" ">
+                <option value="" disabled selected >Select Membership Type</option>
+                <option value="Basic Membership">Basic Membership</option>
+                <option value="Plus Membership">Plus Membership</option>
+                <option value="Family Membership">Family Membership</option>
+                <option value="other">Other</option>
+              </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="Experience">Subscription Duration :</label>
+            <select class="form-control" formControlName="duration" id=" ">
+                <option value="" disabled selected >Select Duration Periods</option>
+                <option value="1 Months">1 Months</option>
+                <option value="3 Months">3 Months</option>
+                <option value="6 Months">6 Months</option>
+                <option value="12 Months">12 Months</option>
+             
+                 
+              </select>
+          </div>
+        
+          <div class="form-group col-md-3">
+            <label for="Experience">Fitness Goals :</label>
+            <select class="form-control" formControlName="goals" id=" ">
+                <option value="" disabled selected >Select your goals</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Bodybuilding">Bodybuilding</option>
+                <option value="weight Lifting">weight Lifting</option>
+                <option value="General Fitness">General Fitness</option>
+             
+                 
+              </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="group">Blood Group :</label>
+            <select class="form-control" formControlName="group" id="bloodGroup">
+              <option value="" disabled selected>Select blood group</option>
+              <option *ngFor="let group of bloodGroups" [value]="group">
+                {{ group }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="group">Payment Method :</label>
+            <select class="form-control" formControlName="paymentmethod" id="bloodGroup">
+              <option value="" disabled selected>Select payment Method</option>
+              <option>Credit Card</option>
+              <option>UPI</option>
+              <option>Cash</option>
+            </select>
+            
+          </div>
+          <div class="form-group col-md-4">
+            <label for="group">Payment Duration :</label>
+            <select class="form-control" formControlName="paymentduration" id="bloodGroup">
+              <option value="" disabled selected>Select payment duration</option>
+              <option>Monthly</option>
+              <option>Quarterly</option>
+              <option>Yearly</option>
+            </select>
+            
+          </div>
+          <div class="form-group col-md-4">
+            <label for="group">Personal Trainer: (optional)</label>
+            <select class="form-control" formControlName="trainer" id="trainer">
+              <option value="" disabled selected>Select trainer</option>
+              <option *ngFor="let trainer of trainerArray" [value]="trainer">{{ trainer }}</option>
+              <option value="notApplicable">Not Applicable</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="field3">Start Date :</label>
+            <input type="date"  formControlName="startDate" class="form-control" id="field3" placeholder="enter start date">
+          </div>
+            <div class="form-group col-md-4">
+            <label for="field2">Payment Status :</label>
+            <select class="form-control" formControlName="paymentstatus" id="status">
+                <option  value="" disabled selected  >Select status </option>
+  
+                <option value="Paid">Paid</option>
+                <option value="Pending">Pending</option>
+              </select>          </div>
+          <div class="form-group col-md-4">
+            <label for="status">Member Status:</label>
+            <select class="form-control" formControlName="isActive" id="status">
+              <option  value="" disabled selected  >Select status </option>
+
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+          </div>
+        
+         
+        </div>
+        
+        <div class="text-center">
+          <button class="btn btns btn-primary" [disabled]="memberForm.invalid" (click)="saveMember()">
+            {{ isEdit ? 'Update Member' : 'Add Member' }}
+          </button>            <!-- <button    class="btn btns btn-primary">Update Product</button> -->
+          </div>
+      </form>
+</div>
+
+ 

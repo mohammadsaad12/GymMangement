@@ -1,0 +1,36 @@
+<div class="heading text-light pt-1">
+    <h4>View Trainer Component</h4>
+    <div class="line"></div>
+
+ </div>
+
+
+
+ 
+<div class="container  mt-4">
+   <div class="row justify-content-center">
+       
+        
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;" *ngIf="TrainerData">
+            <img *ngIf="TrainerData.image" [src]="TrainerData.image" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title ">{{TrainerData.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-light">{{TrainerData.expertise}}</h6>
+              <p class="card-text">Joining Date: {{TrainerData.JoiningDate}} Experience: {{TrainerData.experience}} Years</p>
+              <a href="#" [routerLink]="['/trainer/trainer-list']" routerLinkActive="router-link-active" class="btn  "><i
+                  class="fas fa-back"></i> Go Back</a>
+            </div>
+          </div>
+          
+     </div>  
+     
+     
+   
+     
+         
+   
+     
+       
+   
+   </div>

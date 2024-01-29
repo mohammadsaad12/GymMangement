@@ -1,0 +1,57 @@
+/* styles.css */
+  
+.container-fluid, .row {
+  height: 100%;
+
+}
+
+.sidebar {
+  position: fixed;
+   border-right: 00.4px solid rgb(82, 82, 82);
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #ffffff;
+  height: 100%;
+  overflow-x: hidden;
+
+}
+
+.sideh{
+  border-bottom: 2px solid rgb(134, 129, 129);
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+  font-family: fantasy;
+  text-align: center;
+}
+span{
+  color: rgb(224, 7, 7);
+}
+
+.sidebar a {
+  font-weight: bold;
+  color: #000000; /* White text color for links */
+}
+
+.sidebar a:hover {
+  background-color: #a3a3a3; /* Darker background color on hover */
+}
+
+.sidebar i {
+  margin-right: 8px; /* Add spacing between icon and text */
+}
+ 
+main {
+    margin-left: 0; /* Remove the left margin for the main content */
+     /* Optional padding for the main content */
+  background-image: url("../assets/newbg.jpg");
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+   overflow-x: hidden;
+  }
+ 
